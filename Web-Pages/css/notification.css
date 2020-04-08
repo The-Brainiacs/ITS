@@ -1,0 +1,480 @@
+.mediaViewInfo {
+    --web-view-name: Notifications;
+    --web-view-id: Notifications;
+    --web-scale-on-resize: true;
+    --web-enable-deep-linking: true;
+}
+:root {
+    --web-view-ids: Notifications;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+#Notifications {
+    position: absolute;
+    width: 1920px;
+    height: 1080px;
+    background-color: rgba(245,245,245,1);
+    overflow: hidden;
+    --web-view-name: Notifications;
+    --web-view-id: Notifications;
+    --web-scale-on-resize: true;
+    --web-enable-deep-linking: true;
+}
+.Rectangle_482 {
+    position: absolute;
+    overflow: visible;
+    width: 1978px;
+    height: 123px;
+    left: -39px;
+    top: 0px;
+}
+#Group_14 {
+    position: absolute;
+    width: 950px;
+    height: 33px;
+    left: 752px;
+    top: 45px;
+    overflow: visible;
+}
+#Group_12 {
+    position: absolute;
+    width: 950px;
+    height: 33px;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+}
+#forms {
+    position: absolute;
+    left: 190px;
+    top: 0px;
+    overflow: visible;
+    width: 103px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: IBM Plex Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    color: rgba(92,0,30,1);
+    letter-spacing: 2px;
+}
+#companies {
+    position: absolute;
+    left: 352px;
+    top: 0px;
+    overflow: visible;
+    width: 181px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: IBM Plex Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    color: rgba(92,0,30,1);
+    letter-spacing: 2px;
+}
+#Logbook {
+    position: absolute;
+    left: 592px;
+    top: 0px;
+    overflow: visible;
+    width: 145px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: IBM Plex Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    color: rgba(92,0,30,1);
+    letter-spacing: 2px;
+}
+#about_us {
+    position: absolute;
+    left: 796px;
+    top: 0px;
+    overflow: visible;
+    width: 155px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: IBM Plex Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    color: rgba(92,0,30,1);
+    letter-spacing: 2px;
+}
+#Profile {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+    width: 131px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: IBM Plex Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    color: rgba(92,0,30,1);
+    letter-spacing: 2px;
+}
+#LOGO_UTM {
+    filter: drop-shadow(0px 3px 6px rgba(255, 255, 255, 0.502)) blur(0px);
+    position: absolute;
+    width: 186px;
+    height: 62.001px;
+    left: 39px;
+    top: 31px;
+    overflow: visible;
+}
+#Alert {
+    position: absolute;
+    width: 33px;
+    height: 33px;
+    left: 1769px;
+    top: 44px;
+    overflow: visible;
+}
+.Rectangle_479 {
+    position: absolute;
+    overflow: visible;
+    width: 33px;
+    height: 33px;
+    left: 0px;
+    top: 0px;
+}
+.Path_1 {
+    overflow: visible;
+    position: absolute;
+    width: 32.918px;
+    height: 33px;
+    left: 0px;
+    top: 0px;
+    transform: matrix(1,0,0,1,0,0);
+}
+#Export {
+    transform: matrix(1,0,0,1,1851.1779,45.3876) rotate(-1deg);
+    transform-origin: center;
+    position: absolute;
+    width: 92px;
+    height: 53px;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+}
+.Rectangle_570 {
+    position: absolute;
+    overflow: visible;
+    width: 31.197px;
+    height: 31.197px;
+    left: 0px;
+    top: 1.07px;
+}
+.Path_151 {
+    overflow: visible;
+    position: absolute;
+    width: 28.002px;
+    height: 31.906px;
+    left: 2.115px;
+    top: 1.089px;
+    transform: matrix(1,0,0,1,0,0);
+}
+.Line_42 {
+    overflow: visible;
+    position: absolute;
+    width: 1px;
+    height: 123px;
+    left: 265.5px;
+    top: 0.5px;
+    transform: matrix(1,0,0,1,0,0);
+}
+#ITS {
+    position: absolute;
+    left: 275px;
+    top: 27px;
+    overflow: visible;
+    width: 87px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Times New Roman;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 45px;
+    color: rgba(92,0,30,1);
+    letter-spacing: 2px;
+}
+#Industrial_Training_System {
+    position: absolute;
+    left: 275px;
+    top: 73px;
+    overflow: visible;
+    width: 236px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Times New Roman;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(92,0,30,1);
+    letter-spacing: 2px;
+}
+.Path_95 {
+    overflow: visible;
+    position: absolute;
+    width: 76.674px;
+    height: 95.212px;
+    transform: matrix(1,0,0,1,1746.9427,114.0573) rotate(-90deg);
+    transform-origin: center;
+    left: 0px;
+    top: 0px;
+}
+.Rectangle_571 {
+    position: absolute;
+    overflow: visible;
+    width: 991px;
+    height: 807px;
+    left: 896px;
+    top: 185px;
+}
+#Rectangle_572 {
+    opacity: 0.66;
+}
+.Rectangle_572 {
+    position: absolute;
+    overflow: visible;
+    width: 908px;
+    height: 162px;
+    left: 925px;
+    top: 245px;
+}
+#Rectangle_573 {
+    opacity: 0.66;
+}
+.Rectangle_573 {
+    position: absolute;
+    overflow: visible;
+    width: 908px;
+    height: 162px;
+    left: 925px;
+    top: 436px;
+}
+#Rectangle_574 {
+    opacity: 0.66;
+}
+.Rectangle_574 {
+    position: absolute;
+    overflow: visible;
+    width: 908px;
+    height: 162px;
+    left: 925px;
+    top: 627px;
+}
+#Rectangle_575 {
+    opacity: 0.66;
+}
+.Rectangle_575 {
+    position: absolute;
+    overflow: visible;
+    width: 908px;
+    height: 143px;
+    left: 925px;
+    top: 818px;
+}
+#Group_15 {
+    position: absolute;
+    width: 847px;
+    height: 111px;
+    left: 952px;
+    top: 274px;
+    overflow: visible;
+}
+#Your_placement_at_TOP_GLOVE_CO {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+    width: 845px;
+    height: 88px;
+    line-height: 24px;
+    margin-top: -0.5px;
+    text-align: left;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 23px;
+    color: rgba(71,71,71,1);
+}
+.Rectangle_576 {
+    position: absolute;
+    overflow: visible;
+    width: 246px;
+    height: 36px;
+    left: 601px;
+    top: 75px;
+}
+#Remove_Placement {
+    position: absolute;
+    left: 645px;
+    top: 82px;
+    overflow: visible;
+    width: 176px;
+    white-space: nowrap;
+    line-height: 24px;
+    margin-top: -2px;
+    text-align: left;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    color: rgba(241,235,237,1);
+}
+#Group_16 {
+    position: absolute;
+    width: 847px;
+    height: 111px;
+    left: 950px;
+    top: 469px;
+    overflow: visible;
+}
+#Your_placement_at_TOP_GLOVE_CO_bg {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+    width: 845px;
+    height: 88px;
+    line-height: 24px;
+    margin-top: -0.5px;
+    text-align: left;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 23px;
+    color: rgba(71,71,71,1);
+}
+.Rectangle_576_bh {
+    position: absolute;
+    overflow: visible;
+    width: 246px;
+    height: 36px;
+    left: 601px;
+    top: 75px;
+}
+#Remove_Placement_bi {
+    position: absolute;
+    left: 645px;
+    top: 82px;
+    overflow: visible;
+    width: 176px;
+    white-space: nowrap;
+    line-height: 24px;
+    margin-top: -2px;
+    text-align: left;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    color: rgba(241,235,237,1);
+}
+#Group_17 {
+    position: absolute;
+    width: 847px;
+    height: 111px;
+    left: 952px;
+    top: 662px;
+    overflow: visible;
+}
+#You_have_not_submit_placement_ {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    overflow: hidden;
+    width: 845px;
+    height: 88px;
+    line-height: 24px;
+    margin-top: -0.5px;
+    text-align: left;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 23px;
+    color: rgba(71,71,71,1);
+}
+.Rectangle_576_bl {
+    position: absolute;
+    overflow: visible;
+    width: 246px;
+    height: 36px;
+    left: 601px;
+    top: 75px;
+}
+#Submit_Placement {
+    position: absolute;
+    left: 645px;
+    top: 82px;
+    overflow: visible;
+    width: 163px;
+    white-space: nowrap;
+    line-height: 24px;
+    margin-top: -2px;
+    text-align: left;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    color: rgba(241,235,237,1);
+}
+#Group_18 {
+    position: absolute;
+    width: 847px;
+    height: 88px;
+    left: 950px;
+    top: 855px;
+    overflow: visible;
+}
+#You_have_not_apply_for_any_com {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+    width: 845px;
+    height: 88px;
+    line-height: 24px;
+    margin-top: -0.5px;
+    text-align: left;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 23px;
+    color: rgba(71,71,71,1);
+}
+.Rectangle_576_bp {
+    position: absolute;
+    overflow: visible;
+    width: 246px;
+    height: 36px;
+    left: 601px;
+    top: 44px;
+}
+#View_Company {
+    position: absolute;
+    left: 659px;
+    top: 48px;
+    overflow: visible;
+    width: 135px;
+    white-space: nowrap;
+    line-height: 24px;
+    margin-top: -2px;
+    text-align: left;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    color: rgba(241,235,237,1);
+}
+

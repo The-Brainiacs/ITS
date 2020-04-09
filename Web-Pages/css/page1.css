@@ -1,0 +1,138 @@
+/* Below line is used for online Google font */
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif);
+h2{
+text-align: center;
+font-size: 24px;
+}
+hr{
+margin-bottom: 30px;
+}
+div.container{
+width: 960px;
+height: 610px;
+margin:50px auto;
+font-family: 'Droid Serif', serif;
+position:relative;
+}
+div.main{
+width: 320px;
+margin-top: 80px;
+float:left;
+padding: 10px 55px 40px;
+background-color: rgba(187, 255, 184, 0.65);
+border: 15px solid white;
+box-shadow: 0 0 10px;
+border-radius: 2px;
+font-size: 13px;
+}
+
+
+input[type=text] {
+    position: absolute;
+    left: 370px;
+    top: 355px;
+    overflow: visible;
+    width: 47.7%;
+    height: 34px;
+    padding-left: 5px;
+    margin-bottom: 20px;
+    margin-top: 8px;
+    box-shadow: 0 0 5px  rgba(90,93,94,1);
+    border: 2px solid  rgba(90,93,94,1);
+    color: #4f4f4f;
+    font-size: 16px;
+}
+
+input[type=password] {
+    position: absolute;
+    left: 370px;
+    top: 465px;
+    overflow: visible;
+    width: 47.7%;
+    height: 34px;
+    padding-left: 5px;
+    margin-bottom: 20px;
+    margin-top: 8px;
+    box-shadow: 0 0 5px  rgba(90,93,94,1);
+    border: 2px solid rgba(90,93,94,1);
+    color: #4f4f4f;
+    font-size: 16px;
+}
+
+label.matrics{
+    position: absolute;
+    left: 370px;
+    top: 325px;
+    overflow: visible;
+    width: 171px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    color: rgba(90,93,94,1);
+}
+
+
+label.password{
+    position: absolute;
+    left: 368px;
+    top: 431px;
+    overflow: visible;
+    width: 106px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    color: rgba(90,93,94,1);
+}
+
+#signup {
+    position: absolute;
+    overflow: visible;
+    width: 203px;
+    height: 56px;
+    left: 584px;
+    top: 558px;
+    
+background: linear-gradient(rgba(92,0,30,1) 5%, rgba(92,0,30,1) 100%);
+border: 1px solid rgba(92,0,30,1);
+border-radius: 50px;
+font-size: 20px;
+margin-top: 15px;
+padding: 8px;
+font-weight: bold;
+cursor: pointer;
+color: white;
+text-shadow: 0px 1px 0px #13506D;
+}
+#signup:hover{
+background: linear-gradient(rgba(92,0,30,1) 5%, rgba(92,0,30,1) 100%);
+}
+
+
+
+/* add */
+
+#LOGO_UTM {
+    position: absolute;
+    width: 478px;
+    height: 160.001px;
+    left: 420px;
+    top: 104px;
+    overflow: visible;
+}
+
+#its {
+    position: absolute;
+    left: 610px;
+    top: 300px;
+    overflow: visible;
+    color: rgba(92,0,30,1);
+    font-weight: bold;
+    font-size: 25px;
+
+}

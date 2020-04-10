@@ -1,0 +1,478 @@
+.mediaViewInfo {
+    --web-view-name: Profile;
+    --web-view-id: Profile;
+    --web-scale-on-resize: true;
+    --web-enable-deep-linking: true;
+}
+:root {
+    --web-view-ids: Profile;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+#Profile {
+    position: absolute;
+    box-sizing: border-box;
+    background: #E5E5E5;
+    width: 1920px;
+    height: 1080px;
+    background-color: rgba(245,245,245,1);
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    --web-view-name: Profile;
+    --web-view-id: Profile;
+    --web-scale-on-resize: true;
+    --web-enable-deep-linking: true;
+}
+.Rectangle_482 {
+    position: absolute;
+    overflow: visible;
+    width: 1978px;
+    height: 123px;
+    left: -39px;
+    top: 0px;
+}
+#Group_14 {
+    position: absolute;
+    width: 950px;
+    height: 33px;
+    left: 752px;
+    top: 45px;
+    overflow: visible;
+}
+#Group_12 {
+    position: absolute;
+    width: 950px;
+    height: 33px;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+}
+#forms {
+    position: absolute;
+    left: 190px;
+    top: 0px;
+    overflow: visible;
+    width: 103px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: IBM Plex Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    color: rgba(92,0,30,1);
+    letter-spacing: 2px;
+}
+#companies {
+    position: absolute;
+    left: 352px;
+    top: 0px;
+    overflow: visible;
+    width: 181px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: IBM Plex Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    color: rgba(92,0,30,1);
+    letter-spacing: 2px;
+}
+#Logbook {
+    position: absolute;
+    left: 592px;
+    top: 0px;
+    overflow: visible;
+    width: 145px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: IBM Plex Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    color: rgba(92,0,30,1);
+    letter-spacing: 2px;
+}
+#about_us {
+    position: absolute;
+    left: 796px;
+    top: 0px;
+    overflow: visible;
+    width: 155px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: IBM Plex Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    color: rgba(92,0,30,1);
+    letter-spacing: 2px;
+}
+#Profile_A2_Text_5 {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+    width: 131px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: IBM Plex Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    color: rgba(92,0,30,1);
+    letter-spacing: 2px;
+}
+#LOGO_UTM {
+    filter: drop-shadow(0px 3px 6px rgba(255, 255, 255, 0.502)) blur(0px);
+}
+.LOGO_UTM {
+    position: absolute;
+    overflow: visible;
+    width: 204px;
+    height: 80.001px;
+    left: 39px;
+    top: 31px;
+}
+#Alert {
+    position: absolute;
+    width: 33px;
+    height: 33px;
+    left: 1769px;
+    top: 44px;
+    overflow: visible;
+}
+.Rectangle_479 {
+    position: absolute;
+    overflow: visible;
+    width: 33px;
+    height: 33px;
+    left: 0px;
+    top: 0px;
+}
+.Path_1 {
+    overflow: visible;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 32.918px;
+    height: 33px;
+    transform: matrix(1,0,0,1,0,0);
+}
+#Export {
+    transform: rotate(-1deg);
+    transform-origin: left;
+    position: absolute;
+    width: 92px;
+    height: 53px;
+    left: 1850.722px;
+    top: 44.589px;
+    overflow: visible;
+}
+.Rectangle_570 {
+    position: absolute;
+    overflow: visible;
+    width: 31.197px;
+    height: 31.197px;
+    left: 0px;
+    top: 1.07px;
+}
+.Path_151 {
+    overflow: visible;
+    position: absolute;
+    top: 1.09px;
+    left: 2.115px;
+    width: 28.002px;
+    height: 31.906px;
+    transform: matrix(1,0,0,1,0,0);
+}
+.Line_42 {
+    overflow: visible;
+    position: absolute;
+    top: 0.5px;
+    left: 265.5px;
+    width: 1px;
+    height: 123px;
+}
+#ITS {
+    position: absolute;
+    left: 275px;
+    top: 27px;
+    overflow: visible;
+    width: 87px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Times New Roman;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 45px;
+    color: rgba(92,0,30,1);
+    letter-spacing: 2px;
+}
+#Industrial_Training_System {
+    position: absolute;
+    left: 275px;
+    top: 73px;
+    overflow: visible;
+    width: 236px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Times New Roman;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(92,0,30,1);
+    letter-spacing: 2px;
+}
+.Ellipse_4 {
+    position: absolute;
+    overflow: visible;
+    width: 218px;
+    height: 206px;
+    left: 198px;
+    top: 232px;
+}
+.Icon_material_person {
+    overflow: visible;
+    position: absolute;
+    top: 275px;
+    left: 254px;
+    width: 103.928px;
+    height: 117.182px;
+    transform: matrix(1,0,0,1,0,0);
+}
+.Icon_awesome_edit {
+    overflow: visible;
+    position: absolute;
+    top: 232px;
+    left: 1641.663px;
+    width: 51.837px;
+    height: 44.92px;
+    transform: matrix(1,0,0,1,0,0);
+}
+#NAME_CONTACT_ADDRESS {
+    position: absolute;
+    left: 489px;
+    top: 258px;
+    overflow: visible;
+    width: 161px;
+    white-space: nowrap;
+    line-height: 51px;
+    margin-top: -9px;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 33px;
+    color: rgba(92,0,30,1);
+}
+.Rectangle_578 {
+    position: absolute;
+    overflow: visible;
+    width: 1054px;
+    height: 387px;
+    left: 198px;
+    top: 481px;
+}
+.Rectangle_579 {
+    position: absolute;
+    overflow: visible;
+    width: 1054px;
+    height: 50px;
+    left: 198px;
+    top: 481px;
+}
+#DETAILS_INFORMATION {
+    position: absolute;
+    left: 212px;
+    top: 486px;
+    overflow: visible;
+    width: 316px;
+    white-space: nowrap;
+    line-height: 50px;
+    margin-top: -11px;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    color: rgba(195,165,174,1);
+}
+#FACULTY_COURSE_YEAR_EMAIL_IDEN {
+    position: absolute;
+    left: 212px;
+    top: 543px;
+    overflow: visible;
+    width: 249px;
+    white-space: nowrap;
+    line-height: 50px;
+    margin-top: -15px;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgba(0,0,0,1);
+}
+.Rectangle_580 {
+    position: absolute;
+    overflow: visible;
+    width: 412px;
+    height: 387px;
+    left: 1281px;
+    top: 481px;
+}
+.Rectangle_581 {
+    position: absolute;
+    overflow: visible;
+    width: 412px;
+    height: 50px;
+    left: 1281px;
+    top: 480px;
+}
+#DOCUMENT {
+    position: absolute;
+    left: 1299px;
+    top: 486px;
+    overflow: visible;
+    width: 161px;
+    white-space: nowrap;
+    line-height: 50px;
+    margin-top: -11px;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    color: rgba(195,165,174,1);
+}
+#RESUME {
+    position: absolute;
+    left: 1361px;
+    top: 564px;
+    overflow: visible;
+    width: 68px;
+    white-space: nowrap;
+    line-height: 33px;
+    margin-top: -7.5px;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    color: rgba(0,0,0,1);
+    text-decoration: true;
+}
+#Icon_ionic_ios_document {
+    position: absolute;
+    width: 22.973px;
+    height: 35px;
+    left: 1311px;
+    top: 637px;
+    overflow: visible;
+}
+.Path_153 {
+    overflow: visible;
+    position: absolute;
+    top: 0.007px;
+    left: 14.887px;
+    width: 8.086px;
+    height: 6.954px;
+    transform: matrix(1,0,0,1,0,0);
+}
+.Path_154 {
+    overflow: visible;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 22.973px;
+    height: 35px;
+    transform: matrix(1,0,0,1,0,0);
+}
+#ADD_DOCUMENT {
+    position: absolute;
+    left: 1361px;
+    top: 719px;
+    overflow: visible;
+    width: 141px;
+    white-space: nowrap;
+    line-height: 33px;
+    margin-top: -7.5px;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    color: rgba(0,0,0,1);
+}
+.Icon_metro_bin {
+    overflow: visible;
+    position: absolute;
+    top: 571px;
+    left: 1588px;
+    width: 20.97px;
+    height: 20.35px;
+    transform: matrix(1,0,0,1,0,0);
+}
+.Icon_metro_bin_A2_Path_8 {
+    overflow: visible;
+    position: absolute;
+    top: 641px;
+    left: 1588px;
+    width: 20.97px;
+    height: 20.35px;
+    transform: matrix(1,0,0,1,0,0);
+}
+#Icon_ionic_ios_document_A2_Group_4 {
+    position: absolute;
+    width: 22.973px;
+    height: 35px;
+    left: 1311px;
+    top: 564px;
+    overflow: visible;
+}
+.Path_153_A2_Path_9 {
+    overflow: visible;
+    position: absolute;
+    top: 0.007px;
+    left: 14.887px;
+    width: 8.086px;
+    height: 6.954px;
+    transform: matrix(1,0,0,1,0,0);
+}
+.Path_154_A2_Path_10 {
+    overflow: visible;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 22.973px;
+    height: 35px;
+    transform: matrix(1,0,0,1,0,0);
+}
+.Icon_material_add_circle {
+    overflow: visible;
+    position: absolute;
+    top: 719px;
+    left: 1311px;
+    width: 25px;
+    height: 25px;
+    transform: matrix(1,0,0,1,0,0);
+}
+#ACADEMIC_TRANSCRIPT {
+    position: absolute;
+    left: 1361px;
+    top: 637px;
+    overflow: visible;
+    width: 195px;
+    white-space: nowrap;
+    line-height: 33px;
+    margin-top: -7.5px;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    color: rgba(0,0,0,1);
+}

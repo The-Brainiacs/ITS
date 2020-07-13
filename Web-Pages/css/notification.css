@@ -56,3 +56,10 @@ body{
 #color-red {
     background-color: #5D001D;
 }
+
+
+#icon-noti, #icon-logout{
+  width: 23px;
+  height: 23px;
+  overflow: visible;
+}

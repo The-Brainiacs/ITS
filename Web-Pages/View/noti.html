@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../css/profile.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+<link rel="stylesheet" href="../css/notification.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- <link rel="stylesheet" href="noti.css"> -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!-- HEARDER -->
+<div class="header">
+  <a href="#default" class="logo"><img src="../Assets/ITS-logo.png" alt="" style="height:50px;"></a>
+  <div class="header-right">
+    <a href="#profile"><b>Profile</b></a>
+    <a href="#form"><b>Form</b></a>
+	<a href="#companies"><b>Companies</b></a>
+    <a href="#logbook"><b>Logbook</b></a>
+    <a href="#aboutus"><b>About Us</b></a>
+    <a role="button" data-toggle="dropdown"><i id="icon-noti" class="fa fa-bell"></i></a>
+    <ul class="dropdown-menu">
+        <li class="head text-light" id="color-red">
+          <div class="row">
+            <div class="col-lg-12 col-sm-12 col-12">
+              <span>Notifications (3)</span>
+            </div>
+        </li>
+        <li class="notification-box">
+          <div class="row">
+            <div class="col-lg-1 col-sm-1 col-1 text-center">
+             
+            </div>  
+            <div class="col-lg-10 col-sm-10 col-10">
+              <strong class="color-red">Placement Approval</strong>
+              <div style="font-size: smaller;">
+                Your placement at TOP GLOVE CORPORATION BHD has been approved by the faculty on 22/03/2020, 12:57 PM.
+                <br/>Click to remove placement. 
+              </div>
+              <small class="text-warning">27.11.2015, 15:00</small>
+            </div>    
+          </div>
+        </li>
+        <li class="notification-box bg-gray">
+          <div class="row">
+            <div class="col-lg-1 col-sm-1 col-1 text-center">
+             
+            </div>  
+            <div class="col-lg-10 col-sm-10 col-10">
+              <strong class="color-red">Placement Submission</strong>
+              <div style="font-size: smaller;">
+                Your placement at TOP GLOVE CORPORATION BHD has been submitted on 22/03/2020, 12:45 PM.
+                <br/>Click to remove placement. 
+              </div>
+              <small class="text-warning">27.11.2015, 15:00</small>
+            </div>    
+          </div>
+        </li>
+        <li class="notification-box">
+          <div class="row">
+            <div class="col-lg-1 col-sm-1 col-1 text-center">
+             
+            </div>    
+            <div class="col-lg-10 col-sm-10 col-10">
+              <strong class="color-red">Placement Submission</strong>
+              <div style="font-size: smaller;">
+                You have not submit placement for applied company.<br/>Company name: TOP GLOVE CORPORATION BHD.
+                <br/>Location : Shah Alam, Selangor (MAIN/HQ)<br/>Website: www.topglove.com.my
+              </div>
+              <small class="text-warning">27.11.2015, 15:00</small>
+            </div>    
+          </div>
+        </li>
+        <li class="notification-box">
+            <div class="row">
+                <div class="col-lg-1 col-sm-1 col-1 text-center">
+             
+                </div>    
+                <div class="col-lg-10 col-sm-10 col-10">
+                <strong class="color-red">Application</strong>
+                <div style="font-size: smaller;">
+                    You have not apply for any company yet.
+                </div>
+                <small class="text-warning">27.11.2015, 15:00</small>
+              </div>    
+            </div>
+          </li>
+        <li class="footer text-center" id="color-red" href="" style="color: white"> View All
+          <!-- <a href="">View All</a> -->
+        </li>
+        
+      </ul>
+    
+    <a><img id="icon-logout" src="../Assets/icon-logout.png" alt="logout"></a>
+  </div>
+</div>
+<br><br>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script> 
+        
+		$(document).ready(function(){
+  		$("#edit-btn").click(function(){
+            $("#show-profile").fadeOut("fast").delay('12000');
+           
+   		 $("#update-profile").fadeIn("slow");
+  		});
+		});
+
+		$(document).ready(function(){
+  		$("#update-btn").click(function(){
+            $("#update-profile").fadeOut("fast").delay('12000');
+           
+   		 $("#show-profile").fadeIn("slow");
+  		});
+        });
+        
+       
+</script>
+	
+</body>
+</html>

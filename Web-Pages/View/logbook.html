@@ -10,8 +10,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    
-
 
 </head>
 
@@ -24,80 +22,124 @@
             <a href="#profile"><b>Profile</b></a>
             <a href="#form"><b>Form</b></a>
             <a href="#companies"><b>Companies</b></a>
-            <a href="#logbook"><b>Logbook</b></a>
+            <a class="active" href="#logbook"><b>Logbook</b></a>
             <a href="#aboutus"><b>About Us</b></a>
 
         </div>
     </div>
     <br><br>
 
-    <div class="container">
-        <h2>Week</h2>
-        <!-- <div class="progress">
-            <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
-                style="width:70%;">
-                <span class="sr-only">70% Complete</span>
-            </div>
-        </div> -->
+    <div id="progress" class="container">
+        <h2>Current Week</h2>
+
         <div class="progress">
-            <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 75%"
-                aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+            <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 10%"
+                aria-valuenow="3" aria-valuemin="0" aria-valuemax="20"></div>
         </div>
+        <br><br>
+        <a type="button" id="logbutton" class="btn btn-outline-danger" style="margin-top: 10px; margin-left: 20px;">Update
+            Logbook</a>
+            <br><br>
     </div>
-    <br><br>
-    <div class="container">
-        <div class="row align-items-center">
-            <form class="form-inline">
-                <div class="form-group mx-sm-3 mb-2">
-                    <label for="inputPassword2" class="sr-only">Search Week</label>
-                    <input type="password" class="form-control" id="inputPassword2" placeholder="Week">
+
+   
+    
+    <div id="insertlog" class="container">
+        
+        <div class="row align-items-center" style="background-color: #d4b6333f; display: block;">
+
+            <form style="margin: 10px; padding: 10px ;">
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label for="input">Week</label>
+                        <input type="text" class="form-control" id="" placeholder="1">
+                    </div>
+                    <div class="form-group col">
+                        <label for="input">Date</label>
+                        <input type="date" class="form-control" id="" placeholder="07-Oct-2020">
+                    </div>
+                    <div class="form-group col">
+                        <label for="inputAddress">Day</label>
+                        <input type="text" class="form-control" id="" placeholder="Thursday">
+                    </div>
+                    <div class="form-group col-6">
+                        <label for="input">Log/Activities</label>
+                        <input type="text" class="form-control">
+                    </div>
                 </div>
-                <button type="submit" class="btn btn-warning mb-2">Search</button>
+                <button class="btn btn-light" id="" type="submit">Save</button>
             </form>
         </div>
-
     </div>
-
+    <div id="table" class="container">
+        <form class="form-inline">
+            <div class="form-group mx-sm-3 mb-2">
+                <label for="inputPassword2" class="sr-only">Search Week</label>
+                <input type="text" class="form-control" id="inputPassword2" placeholder="Week">
+            </div>
+            <button type="submit" id="search" class="btn btn-outline-warning mb-2">Search</button>
+        </form>
+        <p id="ins"></p></br>
+    </div>
     
+
+
+
+    <script>
+        $('#insertlog').hide();
+     
+        $('#logbutton').click(function(){
+            $('#insertlog').show();
+        })
+       
+
+        $.ajax({
+            type: "GET",
+            url: "http://localhost/ITS/api/getLogBook.php",
+            dataType: "json",
+            success: function (data, status, xhr) {
+                var prettyContent =
+                    '<table class="table table-striped">';
+
+                prettyContent += '<thead>'
+                prettyContent += '<tr class="p-3 mb-2 text-white">'
+                prettyContent += '<th> Week </th>'
+                prettyContent += '<th> Date </th>'
+                prettyContent += '<th> Day </th>'
+                prettyContent += '<th> Log/Activity </th>'
+                prettyContent += '<th> Date </th>'
+                prettyContent += '<th> Approve </th>'
+                prettyContent += '<th> Edit </th>'
+                prettyContent += '</tr>'
+                prettyContent += '</thead>'
+                prettyContent += '<tbody>'
+                for (let i = 0; i < data.length; i++) {
+                    prettyContent += '<tr>'
+                    prettyContent += '<td>' + data[i].week + '</td>'
+                    prettyContent += '<td>' + data[i].date + '</td>'
+                    prettyContent += '<td>' + data[i].day + '</td>'
+                    prettyContent += '<td>' + data[i].log + '</td>'
+                    prettyContent += '<td>' + data[i].dateApprove + '</td>'
+                    prettyContent += '<td>' + data[i].approve + '</td>'
+                    prettyContent += '<td>' + data[i].edit + '</td>'
+
+                }
+                prettyContent += '</tr>'
+                prettyContent += '</tbody>'
+                prettyContent += '</table>'
+
+                document.querySelector('#ins').innerHTML = prettyContent;
+
+            },
+
+            error: function () {
+                alert("An error occurred while processing JSON file.");
+            }
+        });
+
+    </script>
+
     <br><br>
-    <div class="container">
-
-        <table class="table table-striped">
-            <thead>
-                <tr class="p-3 mb-2 text-white">
-                    <th>No.</th>
-                    <th>Date</th>
-                    <th>Day</th>
-                    <th>Log/Activity</th>
-                    <th>Date</th>
-                    <th>Approve</th>
-                    <th>Edit</th>
-                </tr>
-                
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1.</td>
-                    <td>05 Oct 2020</td>
-                    <td>Monday</td>
-                    <td>N/A</td>
-                    <td>08 Oct 2020</td>
-                    <td>N/A</td>
-                    <td>Disable</td>
-
-                </tr>
-                <tr>
-                    <td>2.</td>
-                    <td>12 Oct 2020</td>
-                    <td>Monday</td>
-                    <td>N/A</td>
-                    <td>12 Oct 2020</td>
-                    <td>N/A</td>
-                    <td>Disable</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
 
 </body>
 

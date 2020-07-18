@@ -48,23 +48,23 @@
         
         <div class="row align-items-center" style="background-color: #d4b6333f; display: block;">
 
-            <form style="margin: 10px; padding: 10px ;">
+            <form id="frm-log" method="POST" style="margin: 10px; padding: 10px ;">
                 <div class="form-row">
                     <div class="form-group col">
                         <label for="input">Week</label>
-                        <input type="text" class="form-control" id="" placeholder="1">
+                        <input type="text" class="form-control" name="week" placeholder="1">
                     </div>
                     <div class="form-group col">
                         <label for="input">Date</label>
-                        <input type="date" class="form-control" id="" placeholder="07-Oct-2020">
+                        <input type="date" class="form-control" name="date" placeholder="07-Oct-2020">
                     </div>
                     <div class="form-group col">
                         <label for="inputAddress">Day</label>
-                        <input type="text" class="form-control" id="" placeholder="Thursday">
+                        <input type="text" class="form-control" name="day" placeholder="Thursday">
                     </div>
                     <div class="form-group col-6">
                         <label for="input">Log/Activities</label>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" name="log" >
                     </div>
                 </div>
                 <button class="btn btn-light" id="" type="submit">Save</button>
@@ -74,8 +74,8 @@
     <div id="table" class="container">
         <form class="form-inline">
             <div class="form-group mx-sm-3 mb-2">
-                <label for="inputPassword2" class="sr-only">Search Week</label>
-                <input type="text" class="form-control" id="inputPassword2" placeholder="Week">
+                <label for="inputWeek" class="sr-only">Search Week</label>
+                <input type="text" class="form-control" id="inputWeek" placeholder="Week">
             </div>
             <button type="submit" id="search" class="btn btn-outline-warning mb-2">Search</button>
         </form>
@@ -91,11 +91,12 @@
         $('#logbutton').click(function(){
             $('#insertlog').show();
         })
-       
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
 
         $.ajax({
             type: "GET",
-            url: "http://localhost/ITS/api/getLogBook.php",
+            url: "http://localhost/its/api/getLogBook.php",
             dataType: "json",
             success: function (data, status, xhr) {
                 var prettyContent =
@@ -137,6 +138,80 @@
             }
         });
 
+        $('#search').click(function () {
+            $.ajax({
+                type: "GET",
+                url: "http://localhost/its/api/getLogByWeek.php?week=" + $('#inputWeek').val(),
+                dataType: "json",
+                success: function (data, status, xhr) {
+                    alert('ok');
+                    var prettyContent =
+                    '<table class="table table-striped">';
+
+                prettyContent += '<thead>'
+                prettyContent += '<tr class="p-3 mb-2 text-white">'
+                prettyContent += '<th> Week </th>'
+                prettyContent += '<th> Date </th>'
+                prettyContent += '<th> Day </th>'
+                prettyContent += '<th> Log/Activity </th>'
+                prettyContent += '<th> Date </th>'
+                prettyContent += '<th> Approve </th>'
+                prettyContent += '<th> Edit </th>'
+                prettyContent += '</tr>'
+                prettyContent += '</thead>'
+                prettyContent += '<tbody>'
+                for (let i = 0; i < data.length; i++) {
+                    prettyContent += '<tr>'
+                    prettyContent += '<td>' + data[i].week + '</td>'
+                    prettyContent += '<td>' + data[i].date + '</td>'
+                    prettyContent += '<td>' + data[i].day + '</td>'
+                    prettyContent += '<td>' + data[i].log + '</td>'
+                    prettyContent += '<td>' + data[i].dateApprove + '</td>'
+                    prettyContent += '<td>' + data[i].approve + '</td>'
+                    prettyContent += '<td>' + data[i].edit + '</td>'
+
+                }
+                prettyContent += '</tr>'
+                prettyContent += '</tbody>'
+                prettyContent += '</table>'
+                document.querySelector('#ins').innerHTML = prettyContent;
+
+            },
+
+                error: function () {
+                    alert(status);
+                }
+            });
+        });
+
+        $('#frm-log').submit(function (event) {
+            alert('Logbook submitted');
+            event.preventDefault();
+
+            var formData = $(this).serialize();
+            console.log(formData);  // check using console to make sure all the form data values are correctly serialized
+
+            $.ajax({
+                type: "POST",
+                url: "http://localhost/its/api/insertLog.php",
+                data: formData,
+                dataType: "json",
+
+                success: function (data, status, xhr) {
+                    if (data.rowcount >0) {
+                        alert('Log added successfully');
+                        appendList(data);
+                    }
+                    else {
+                        alert('fail to insert, ' + data.errormessage);
+                    }
+                },
+
+                error: function () {
+                    alert('error' + status.log);
+                }
+            });
+        });
     </script>
 
     <br><br>

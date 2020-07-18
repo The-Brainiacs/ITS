@@ -1,11 +1,9 @@
 <?php
-
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
 
-require 'vendor\autoload.php';
-require 'api\db.php';
-
+require 'vendor/autoload.php';
+require 'api/db.php';
 $app = new \Slim\App;
 
 $app->get('/', function (Request $request, Response $response, array $args) {
@@ -23,6 +21,7 @@ $app->get('/logbook', function (Request $request, Response $response, array $arg
         $db = new db();
         // Connect
         $db = $db->connect();
+
         $stmt = $db->query($sql);
         $user = $stmt->fetchAll(PDO::FETCH_OBJ);
         $db = null;

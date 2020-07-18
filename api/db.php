@@ -7,7 +7,7 @@ header("Access-Control-Allow-Methods: GET, POST, OPTIONS, DELETE");
         private $host = 'localhost';
         private $user = 'root';
         private $password = '';
-        private $dbname = 'its';
+        private $dbname = 'logbook';
 
         // Connect
         public function connect(){

@@ -1,0 +1,35 @@
+@baseUrl = http://localhost/ITS
+
+
+GET {{baseUrl}}/
+
+###
+GET {{baseUrl}}/patients
+
+###
+GET {{baseUrl}}/patients/1
+
+###
+POST {{baseUrl}}/patients
+Content-Type: application/json
+
+{
+    "id": "2",
+    "name": "abu",
+    "admission_date": "2020-07-07",
+    "icu_date": "2020-07-07",
+    "dicharge_date": "2020-07-08",
+    "status": "Discharged"
+}
+
+###
+PUT {{baseUrl}}/patients/1
+Content-Type: application/json
+
+{
+    "name": "ahmad",
+    "admission_date": "2020-07-07",
+    "icu_date": "2020-07-07",
+    "dicharge_date": "2020-07-08",
+    "status": "Discharged"
+}

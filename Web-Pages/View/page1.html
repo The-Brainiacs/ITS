@@ -14,8 +14,6 @@
 </head>
 
 <body>
-    <!-- <div class="container"> -->
-    <!-- <div class="main"> -->
     <img id="LOGO_UTM" src="../Assets/LOGO-UTM.png">
     <div id="its">Industrial Training System</div>
     <form class="form" method="post" action="#">
@@ -26,15 +24,6 @@
         <input type="password" name="password" id="password">
         <input type="button" name="signup" id="signup" value="Signup">
     </form>
-    <!-- </div> -->
-    <!-- </div> -->
-
-
-
-
-    <!-- <p id="p-les02-array">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, repellat.</p></br> -->
-
-
 </body>
 
 
@@ -55,42 +44,10 @@
 
             else {
 
-                //         $.ajax({
-                //     type: "GET",
-                //     url: "http://localhost/ITS/api/getsingleuser.php?username=" + username,
-                //     dataType: "json",
-                //     success: function (data, status, xhr) {
-
-                //         $.each(data, function () {
-                //             var prettyContent = '<br><br><br>';
-                //             prettyContent += '<br>Name : ' + data.username;
-                //             prettyContent += '<br>Id : ' + data.password;
-
-                //             document.querySelector('#its').innerHTML = prettyContent;
-
-                //             // if ((matrics == data.username)){
-                //             //     window.location = "http://localhost/ITS/Web-Pages/View/profile.html";
-                //             //     }
-
-                //             //     else {
-                //             //     $('input[type="text"],input[type="password"]').css("border","2px solid red");
-                //             //     $('input[type="text"],input[type="password"]').css("box-shadow","0 0 3px red");
-                //             //     alert("Wrong matrics number or password!");
-                //             //     }
-
-                //         });
-                //     },
-
-                //     error: function () {
-                //         alert("fail to get data");
-                //     }
-
-                // });
-
-
                 $.ajax({
                     type: "GET",
-                    url: "http://localhost/ITS/api/getAllUser.php",
+                    // url: "http://localhost/ITS/api/getAllUser.php",
+                    url: "http://localhost/ITS/users",
                     dataType: "json",
                     success: function (data, status, xhr) {
                         // alert('ok, sucessfully get the data');
@@ -99,14 +56,6 @@
                         );
 
                         $.each(data, function () {
-                            // $('#its').append(
-                            //                 ' <ul>' +
-                            //                 ' <li>Username: ' + this['username'] + '</li>' +
-                            //                 ' <li>Id: ' + this['password'] + '</li>' +
-                            //                 ' </ul><br>'
-                            //             );
-
-
                             if (username == this['username'] && password == this['password']) {
                                 window.location = "http://localhost/ITS/Web-Pages/View/profile.html";
                             }
@@ -131,29 +80,5 @@
 
         });
     });
-
-
-    // $.ajax({
-    //     type: "GET",
-    //     url: "http://localhost/ITS/api/getAllUser.php",
-    //     dataType: "json",
-    //     success: function (data, status, xhr) {
-    //         // alert('ok, sucessfully get the data');
-    //         $('#p-les02-array').html(
-    //             ' '
-    //         );
-
-    //         $.each(data, function () {
-
-
-
-    //         });
-    //     },
-
-    //     error: function () {
-    //         alert("fail to get data");
-    //     }
-
-    // });
 
 </script>

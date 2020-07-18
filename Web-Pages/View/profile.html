@@ -4,6 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="../css/profile.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
@@ -27,12 +28,12 @@
 <div class="container" id="show-profile" style="display: block;">
 	<div class="row">
 	  <div class="col">
-		<img src="/Web-Pages/Assets/profile.png" alt="profile picture">
+		<img src="/Web-Pages/Assets/profile.png" alt="profile picture" id="picture">
 	  </div>
 	  <div class="col-6">
-		<h3 style="color: #5D001D;">NAME</h3>
-		<h3 style="color: #5D001D;">CONTACT</h3>
-		<h3 style="color: #5D001D;">COURSE/YEAR</h3>
+		<h3 style="color: #5D001D;" id="name">NAME</h3>
+		<!-- <h3 style="color: #5D001D;" id="faculty">Faculty</h3> -->
+		<h3 style="color: #5D001D;" id="course">COURSE/YEAR</h3>
 
 	  </div>
 	  <div class="col">
@@ -48,17 +49,16 @@
 		<div class="card" >
 			<h5 class="card-header" style="background-color: #5D001D; color: #C5A4AD;">Details Information</h5>
 			<div class="card-body">
-				<h6>Address</h6>
-				<h6>Faculty</h6>
-				<h6>Email</h6>
-				<h6>Identification Number</h6>
-				<h6>Gender</h6>
-				<h6>Home number</h6>
+				<h6 id="address">Address : </h6>
+				<h6 id="contact">Contact : </h6>
+				<h6 id="email">Email : </h6>
+				<h6 id="ic">Identification Number : </h6>
+				<h6 id="gender">Gender : </h6>
 			</div>
 		  </div>
 	  </div>
 
-	  <div class="col">
+	  <div class="col">	
 			<div class="card" >
 				<h5 class="card-header" style="background-color: #5D001D; color: #C5A4AD;">Documents</h5>
 				<div class="card-body">
@@ -71,87 +71,116 @@
 	</div>
   </div>
 
-<!-- EDIT-PROFILE -->
-<div class="container" style="background-color: #C5A4AD; display: none;" id="update-profile">
+<!-- EDIT-PROFILE  -->
+<div class="container" style="background-color: #C5A4AD; display: none;"  id="update-profile">
+	<br>
+	<h3><b>EDIT PROFILE</b></h3><br>
 	<form>
 		<div class="form-row">
 		  <div class="form-group col-md-6">
 			<label for="input">Email</label>
-			<input type="email" class="form-control" id="inputEmail4">
+			<input type="email" class="form-control" id="newemail">
 		  </div>
-		</div>
-		<div class="form-row">
-			<div class="form-group col-md-6">
+			  <div class="form-group col-md-6">
 			  <label for="input">Contact Number</label>
-			  <input type="text" class="form-control" id="">
+			  <input type="text" class="form-control" id="newphone">
 			</div>
-			<div class="form-group col-md-6">
-			  <label for="input">Home Number</label>
-			  <input type="text" class="form-control" id="">
-			</div>
-		  </div>
+		</div>
 		<div class="form-group">
 		  <label for="inputAddress">Address</label>
-		  <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-		</div>
-
-		<div class="form-row">
-		  <div class="form-group col-md-6">
-			<label for="inputCity">City</label>
-			<input type="text" class="form-control" id="inputCity">
-		  </div>
-		  <div class="form-group col-md-4">
-			<label for="inputState">State</label>
-			<select id="inputState" class="form-control">
-			  <option selected>Choose...</option>
-			  <option>Johor</option>
-			  <option>Selangor</option>
-
-			</select>
-		  </div>
-		  <div class="form-group col-md-2">
-			<label for="inputZip">Zip</label>
-			<input type="text" class="form-control" id="inputZip">
-		  </div>
+		  <input type="text" class="form-control" id="newaddress">
 		</div>
 		
 		<button type="submit" class="btn" style="background-color: #5D001D; color:white;" id="update-btn">Update</button>
 	  </form>
+	  <br>
+	  <p><b>*this is the only data that you can change, for other data changes please refer to academic office of your faculty</b></p>
 	  <br><br>
-</div>
+	</div>
 
-<!-- <script>
-	function editprofile() {
-	  var x = document.getElementById("show-profile");
-	  var y = document.getElementById("update-profile");
-		x.style.display = "none";
-		y.style.display = "block";
-	}
 
-	function updateprofile() {
-	  var x = document.getElementById("show-profile");
-	  var y = document.getElementById("update-profile");
-		x.style.display = "block";
-		y.style.display = "none";
-	}
-
-	</script> -->
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-		<script> 
-		$(document).ready(function(){
+<script> 
+		// show hide edit panel
+		
   		$("#edit-btn").click(function(){
 			$("#show-profile").fadeOut("fast").delay('12000');
    		 $("#update-profile").fadeIn("slow");
   		});
-		});
+	
 
-		$(document).ready(function(){
+		// $(document).ready(function(){
   		$("#update-btn").click(function(){
-			$("#update-profile").fadeOut("fast").delay('12000');
-   		 $("#show-profile").fadeIn("slow");
+		// 	$("#update-profile").fadeOut("fast").delay('12000');
+   		//  $("#show-profile").fadeIn("slow");
+		   var newphone = document.getElementById("newphone").value;
+		   var newemail= document.getElementById("newemail").value;
+		   var newaddress = document.getElementById("newaddress").value;
+
+		//    console.log(newphone);
+		    
+				$.ajax({
+				type: "PUT",
+                url: "http://localhost/its/profiles/1",
+                dataType: "json",
+				data: JSON.stringify({
+					newphone: newphone,
+					newemail: newemail,
+					newaddress: newaddress,
+				}),
+                success: function (data) {
+					console.log(data);
+					
+                },
+
+                error: function () {
+                    alert('Connection to server failed');
+                }
+				});
+				//console.log(response);
+
   		});
+		// });
+
+		//getting profile data form the database
+		const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+		const id = '1';
+        // console.log('Hello,test');
+		$.ajax({
+                type: "GET",
+                url: "http://localhost/its/profiles/1",
+                dataType: "json",
+                success: function (data, status, xhr) {
+					// $('#name').append(data.name);
+                    document.getElementById("name").innerHTML = data.name;
+                    // document.getElementById("faculty").innerHTML = data.faculty;
+                    document.getElementById("course").innerHTML = data.course;
+					$('#address').append(data.address);
+					$('#email').append(data.email);
+					$('#ic').append(data.ic);
+					$('#gender').append(data.gender);
+					$('#contact').append(data.phone);
+					
+                },
+
+                error: function () {
+                    alert('Connection to server failed');
+                }
+            });
+
+		//getting a random profile pic
+		$.ajax({
+			url: 'https://randomuser.me/api/?gender=female',
+			dataType: 'json',
+			success: function(data) {
+				// $('#picture').append(data.picture.medium);
+				console.log(data);
+			}
 		});
+      
+
 </script>
 	
 </body>

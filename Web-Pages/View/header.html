@@ -5,8 +5,7 @@
     <link rel="stylesheet" href="../css/notification.css">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css"
-        href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- <link rel="stylesheet" href="noti.css"> -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
@@ -39,9 +38,7 @@
         </li>
 
         <li id=try>
-
         </li>
-
 
       </ul>
 
@@ -57,7 +54,7 @@ $(document).ready(function () {
 
     $.ajax({
         type: "GET",
-        url: "http://localhost/ITS/api/getAllNotification.php",
+        url: "http://localhost/ITS/notifications",
         dataType: "json",
         success: function (data, status, xhr) {
         //  alert('ok, sucessfully get the data');

@@ -16,18 +16,8 @@
 <body>
 
     <!-- HEARDER -->
-    <div class="header">
-        <a href="#default" class="logo"><img src="/Web-Pages/Assets/ITS-logo.png" alt="" style="height:50px;"></a>
-        <div class="header-right">
-            <a href="#profile"><b>Profile</b></a>
-            <a href="#form"><b>Form</b></a>
-            <a href="#companies"><b>Companies</b></a>
-            <a class="active" href="#logbook"><b>Logbook</b></a>
-            <a href="#aboutus"><b>About Us</b></a>
-
-        </div>
-    </div>
-    <br><br>
+	<div w3-include-html="header.html"></div>
+	<br><br>
 
     <div id="progress" class="container">
         <h2>Current Week</h2>
@@ -212,6 +202,36 @@
                 }
             });
         });
+
+        //Include other html file
+        includeHTML();
+        function includeHTML() {
+            var z, i, elmnt, file, xhttp;
+            /* Loop through a collection of all HTML elements: */
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                /*search for elements with a certain atrribute:*/
+                file = elmnt.getAttribute("w3-include-html");
+                if (file) {
+                /* Make an HTTP request using the attribute value as the file name: */
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4) {
+                    if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                    if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                    /* Remove the attribute, and call this function once more: */
+                    elmnt.removeAttribute("w3-include-html");
+                    includeHTML();
+                    }
+                }
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                /* Exit the function: */
+                return;
+                }
+            }
+        }
     </script>
 
     <br><br>

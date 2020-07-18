@@ -99,10 +99,150 @@
         
       </ul>
     
-    <a><img id="icon-logout" src="../Assets/icon-logout.png" alt="logout"></a>
+    <a class="fa fa-bell"><img id="icon-logout" src="../Assets/icon-logout.png" alt="logout"></a>
   </div>
 </div>
 <br><br>
+<<<<<<< Updated upstream
+=======
+
+<!-- SHOW PROFILE -->
+<div class="container" id="show-profile" style="display: block;">
+	<div class="row">
+	  <div class="col">
+		<img src="../Assets/profile.png" alt="profile picture">
+	  </div>
+	  <div class="col-6">
+		<h3 style="color: #5D001D;">NAME</h3>
+		<h3 style="color: #5D001D;">CONTACT</h3>
+		<h3 style="color: #5D001D;">COURSE/YEAR</h3>
+
+	  </div>
+	  <div class="col">
+		<button type="button" class="btn" data-toggle="tooltip" data-placement="top" title="Edit Your Profile Info" style="background-color: #5D001D; color:white;" id="edit-btn">
+			<i class="fas fa-edit"></i>   Edit 
+		
+	  </div>
+	</div>
+	<br><br><br>
+	<div class="row">
+	  <div class="col-8">
+
+		<div class="card" >
+			<h5 class="card-header" style="background-color: #5D001D; color: #C5A4AD;">Details Information</h5>
+			<div class="card-body">
+				<h6>Address</h6>
+				<h6>Faculty</h6>
+				<h6>Email</h6>
+				<h6>Identification Number</h6>
+				<h6>Gender</h6>
+				<h6>Home number</h6>
+			</div>
+		  </div>
+	  </div>
+
+	  <div class="col">
+			<div class="card" >
+				<h5 class="card-header" style="background-color: #5D001D; color: #C5A4AD;">Documents</h5>
+				<div class="card-body">
+				<a href="#"><i class="fas fa-file"></i> Resume</a>
+			</div>
+		  </div>
+	  </div>
+
+	  </div>
+	</div>
+  </div>
+  <!-- end of edit profile -->
+
+<!-- EDIT-PROFILE -->
+<div class="container" style="background-color: #C5A4AD; display: none;" id="update-profile">
+	<form>
+		<div class="form-row">
+		  <div class="form-group col-md-6">
+			<label for="input">Email</label>
+			<input type="email" class="form-control" id="inputEmail4">
+		  </div>
+		</div>
+		<div class="form-row">
+			<div class="form-group col-md-6">
+			  <label for="input">Contact Number</label>
+			  <input type="text" class="form-control" id="">
+			</div>
+			<div class="form-group col-md-6">
+			  <label for="input">Home Number</label>
+			  <input type="text" class="form-control" id="">
+			</div>
+		  </div>
+		<div class="form-group">
+		  <label for="inputAddress">Address</label>
+		  <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+		</div>
+
+		<div class="form-row">
+		  <div class="form-group col-md-6">
+			<label for="inputCity">City</label>
+			<input type="text" class="form-control" id="inputCity">
+		  </div>
+		  <div class="form-group col-md-4">
+			<label for="inputState">State</label>
+			<select id="inputState" class="form-control">
+			  <option selected>Choose...</option>
+			  <option>Johor</option>
+			  <option>Selangor</option>
+
+			</select>
+		  </div>
+		  <div class="form-group col-md-2">
+			<label for="inputZip">Zip</label>
+			<input type="text" class="form-control" id="inputZip">
+		  </div>
+		</div>
+		
+		<button type="submit" class="btn" style="background-color: #5D001D; color:white;" id="update-btn">Update</button>
+	  </form>
+	  <br><br>
+</div>
+<!-- end of edit profile -->
+
+
+<!-- <script>
+	function editprofile() {
+	  var x = document.getElementById("show-profile");
+	  var y = document.getElementById("update-profile");
+		x.style.display = "none";
+		y.style.display = "block";
+	}
+	function updateprofile() {
+	  var x = document.getElementById("show-profile");
+	  var y = document.getElementById("update-profile");
+		x.style.display = "block";
+		y.style.display = "none";
+	}
+	</script> -->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script> 
+        
+		$(document).ready(function(){
+  		$("#edit-btn").click(function(){
+            $("#show-profile").fadeOut("fast").delay('12000');
+           
+   		 $("#update-profile").fadeIn("slow");
+  		});
+		});
+
+		$(document).ready(function(){
+  		$("#update-btn").click(function(){
+            $("#update-profile").fadeOut("fast").delay('12000');
+           
+   		 $("#show-profile").fadeIn("slow");
+  		});
+        });
+        
+       
+</script>
+>>>>>>> Stashed changes
 	
 </body>
 </html>

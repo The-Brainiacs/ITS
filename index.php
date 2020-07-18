@@ -19,6 +19,12 @@ $app->get('/profiles/{id}', function (Request $request, Response $response, arra
     $id = $args['id'];
     $sql = "SELECT * FROM profiles WHERE id = $id";
 
+
+// Logbook - Retrive table
+// $app->get('/logbook', function (Request $request, Response $response, array $args) {
+
+//     $sql = "SELECT * FROM log_book";
+
     try {
         // Get DB Object
         $db = new db();
@@ -76,7 +82,7 @@ $app->put('/profiles/{id}', function (Request $request, Response $response, arra
         );
         echo json_encode($data);
     }
-    resp.send('Haluuuuya');
+    // resp.send('Haluuuuya');
 });
 
 

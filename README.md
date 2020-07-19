@@ -1,5 +1,7 @@
 WebTech Group Project (Section 4)
 
+Presentation Video Link : https://youtu.be/gw_dKGdCKB0
+
 Project Title: Industrial Training System (ITS) 
 
 Group Member

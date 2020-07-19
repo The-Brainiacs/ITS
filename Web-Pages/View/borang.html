@@ -68,8 +68,8 @@
 					</div>
 					<div class="col-md-4">
 						<!-- Opening in new tab -->
-						<a class="btn button_borang" type="button" href="header.html" target="_blank">View BLI-1C</a>
-						<a class="btn button_borang" type="button" href="header.html" target="_blank">View BLI-2A</a>
+						<a class="btn button_borang" type="button" href="bli1c.html" target="_blank">View BLI-1C</a>
+						<a class="btn button_borang" type="button" onclick="notAvail()" href="" target="_blank">View BLI-2A</a>
 					</div>
 				</div>
 				<br>
@@ -87,68 +87,55 @@
 						<br>
 						<h4>*Please Use Capital Letter</h4>
 						<br>
-						<form>
+						<form id="form-bli1c">
 							<!-- COORDINATOR'S INFORMATION -->
 							<div id="div_form1">
 								<h3>COORDINATOR'S INFORMATION</h3>
 								<div class="form-row">
 								<div class="form-group col-md-12">
 									<label for="input">Coordinator's Name</label>
-									<input type="email" class="form-control" id="inputEmail4" >
+									<!-- Coordinator's name -->
+									<input type="text" class="form-control" id="" name="coor_name" > 
 								</div>
 								</div>
 		
 								<div class="form-row">
 									<div class="form-group col-md-6">
 									<label for="input">Faculty</label>
-									<input type="text" class="form-control" id="" placeholder="FACULTY OF COMPUTING">
+									<!-- Faculty -->
+									<input type="text" class="form-control" id="" name="faculty" placeholder="FACULTY OF COMPUTING">
 									</div>
 									<div class="form-group col-md-3">
+									<!-- Office Number -->
 									<label for="input">Office Number</label>
-									<input type="text" class="form-control" id="" placeholder="07-12345645">
+									<input type="text" class="form-control" id="" name="office_num" placeholder="07-12345645">
 									</div>
 									<div class="form-group col-md-3">
+									<!-- Phone Number -->
 									<label for="inputAddress">Phone Number</label>
-									<input type="text" class="form-control" id="" placeholder="017-12345645">
+									<input type="text" class="form-control" id="" name="phone_num" placeholder="017-12345645">
 									</div>
 								</div>
 								
 								<div class="form-row">
 									<div class="form-group col-md-4">
+										<!-- Faculty Programme -->
 										<label for="inputState">Faculty's Programme</label>
-										<input type="text" class="form-control" id="" placeholder="SOFTWARE ENGINEERING">
-										<!-- <select id="inputState" class="form-control">
-											<option selected>Choose...</option>
-											<option>Johor</option>
-											<option>Selangor</option>
-							
-										</select> -->
+										<select id="inputState" name="faculty_programme" class="form-control">
+											<option selected value="">Choose...</option>
+											<option value="SCSJ">SCSJ</option>
+											<option value="SCSR">SCSR</option>
+											<option value="SCSV">SCSV</option>
+											<option value="SCSB">SCSB</option>
+											<option value="SCSP">SCSP</option>
+										</select>
 									</div>
 									<div class="form-group col-md-8">
 										<label for="inputCity">Email</label>
-										<input type="text" class="form-control" id="inputEmail4" placeholder="abc@utm.graduate.my">
+										<!-- Email -->
+										<input type="text" class="form-control" id="inputEmail4" name="coor_email" placeholder="abc@utm.graduate.my">
 									</div>
 								</div>
-		
-								<!-- <div class="form-row">
-									<div class="form-group col-md-6">
-										<label for="inputCity">City</label>
-										<input type="text" class="form-control" id="inputCity">
-									</div>
-									<div class="form-group col-md-4">
-										<label for="inputState">State</label>
-										<select id="inputState" class="form-control">
-											<option selected>Choose...</option>
-											<option>Johor</option>
-											<option>Selangor</option>
-							
-										</select>
-									</div>
-									<div class="form-group col-md-2">
-										<label for="inputZip">Zip</label>
-										<input type="text" class="form-control" id="inputZip">
-									</div>
-								</div> -->
 								
 								<div class="form-row">
 									<div class="form-group col-md-12" >
@@ -162,58 +149,49 @@
 								<h3>COMPANY MAIN DETAILS</h3>
 								<div class="form-row">
 									<div class="form-group col-md-8">
+									<!-- Company name -->
 									<label for="input">Company Name</label>
-									<input type="email" class="form-control" id="inputEmail4" >
+									<input type="text" class="form-control" id="" name="comp_name">
 									</div>
 									<div class="form-group col-md-4">
-									<label for="input">Registration Name</label>
-									<input type="email" class="form-control" id="inputEmail4" >
+									<!-- Reg. num -->
+									<label for="input">Registration Number</label>
+									<input type="text" class="form-control" id="" name="comp_reg">
 									</div>
 								</div>
 
 								<div class="form-row">
 									<div class="form-group col-md-8">
 									<label for="input">CEO's Name</label>
-									<input type="email" class="form-control" id="inputEmail4" >
+									<!-- CEO Name -->
+									<input type="text" class="form-control" id="" name="comp_ceo">
 									</div>
 									<div class="form-group col-md-4">
+									<!-- Comp Website -->
 									<label for="input">Website (if any)</label>
-									<input type="email" class="form-control" id="inputEmail4" >
-									</div>
-								</div>
-								
-								<div class="form-row">
-									<div class="form-group col-md-6">
-									<label for="input">Faculty</label>
-									<input type="text" class="form-control" id="" placeholder="FACULTY OF COMPUTING">
-									</div>
-									<div class="form-group col-md-3">
-									<label for="input">Office Number</label>
-									<input type="text" class="form-control" id="" placeholder="07-12345645">
-									</div>
-									<div class="form-group col-md-3">
-									<label for="inputAddress">Phone Number</label>
-									<input type="text" class="form-control" id="" placeholder="017-12345645">
+									<input type="text" class="form-control" id="" name="comp_website">
 									</div>
 								</div>
 								
 								<div class="form-row">
 									<div class="form-group col-md-4">
 										<label for="inputState">Company's Category</label>
-										<select id="inputState" class="form-control">
-											<option selected>Choose...</option>
-											<option>NGO</option>
-											<option>GLC</option>
-											<option>Statutory Bodies</option>
-											<option>Private</option>
-											<option>Multinational (Private/Foreign)</option>
-											<option>Own Company</option>
-											<option>Others</option>
+										<!-- Comp category -->
+										<select id="inputState" name="comp_category" class="form-control">
+											<option selected value="">Choose...</option>
+											<option value="NGO">NGO</option>
+											<option value="GLC">GLC</option>
+											<option value="Statutory Bodies">Statutory Bodies</option>
+											<option value="Private">Private</option>
+											<option value="Multinational (Private/Foreign)">Multinational (Private/Foreign)</option>
+											<option value="Own Company">Own Company</option>
+											<option value="Others">Others</option>
 										</select>
 									</div>
 									<div class="form-group col-md-8">
 										<label for="inputState">Company's Sector Identified by Ministry of Higher Education</label>
-										<select id="inputState" class="form-control" onchange="showfield(this.options[this.selectedIndex].value)">
+										<!-- Comp Sector -->
+										<select id="inputState" name="comp_sector" class="form-control" onchange="showfield(this.options[this.selectedIndex].value)">
 											<option selected>Choose...</option>
 											<option>Pertanian, Perhutanan dan Perikanan </option>
 											<option>Perlombongan dan Pengkuarian </option>
@@ -265,33 +243,37 @@
 								<h3>COMPANY DEPARTMENT DETAILS AND CONTACT PERSON</h3>
 								<div class="form-row">
 									<div class="form-group col-md-12">
+									<!-- Department -->
 									<label for="input">Department Name</label>
-									<input type="email" class="form-control" id="inputEmail4" >
+									<input type="text" class="form-control" id="" name="department">
 									</div>
 								</div>
 
 								<div class="form-row">
 									<div class="form-group col-md-12">
+									<!-- Contact Person -->
 									<label for="input">Name of Contact Person</label>
-									<input type="email" class="form-control" id="inputEmail4" >
+									<input type="text" class="form-control" id="" name="contact_name">
 									</div>
 								</div>
 
 								<div class="form-row">
 									<div class="form-group col-md-6">
+									<!-- Contact phone -->
 									<label for="input">Mobile Num. of Contact Person</label>
-									<input type="email" class="form-control" id="inputEmail4" >
+									<input type="text" class="form-control" id="" name="contact_phone">
 									</div>
 									<div class="form-group col-md-6">
+									<!-- Contact email -->
 									<label for="input">Email of Contact Person</label>
-									<input type="email" class="form-control" id="inputEmail4" >
+									<input type="text" class="form-control" id="inputEmail4" name="contact_email">
 									</div>
 								</div>							
 								
 								<div class="form-row">
 									<div class="form-group col-md-12">
 										<button onclick="back_3()" class="btn form_button" type="button">Back</button>
-										<button onclick="next_3()" class="btn form_button right" type="button">Submit</button>
+										<button class="btn form_button right" type="submit">Submit</button>
 									</div>
 								</div>
 							</div>
@@ -301,14 +283,6 @@
 						<br>
 						<h4>NOT AVAILABLE (YET!)</h4>
 					</div>
-					<!-- <div id="menu2" class="tab-pane fade">
-						<h3>Menu 2</h3>
-						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-					</div>
-					<div id="menu3" class="tab-pane fade">
-						<h3>Menu 3</h3>
-						<p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-					</div> -->
 				</div>
 			</div>
 		</div>
@@ -316,10 +290,6 @@
 		<br>
 	</div>
 	<!-- End Form -->
-
-	<!-- Footer -->
-	<br>
-	<!-- <div w3-include-html="footer.html"></div> -->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script> 
@@ -329,7 +299,7 @@
 
 	function showfield(name){
 		if(name == 'Other') {
-			document.getElementById('specify_MOF').innerHTML = 'Please Specify: <input type="text" class="form-control" id="" placeholder="">';
+			document.getElementById('specify_MOF').innerHTML = 'Please Specify: <input type="text" class="form-control" id="" name="comp_sector" placeholder="">';
 		}
 		else {
 			document.getElementById('specify_MOF').innerHTML='';
@@ -359,6 +329,38 @@
 		div_form2.style.display = "block";
 		div_form3.style.display = "none";
 	}
+
+	function notAvail() {
+		alert('Sorry, This Page is Unavailable Yet!');
+	}
+
+	$('#form-bli1c').submit(function (event) {
+		event.preventDefault();
+
+		var formData = $(this).serialize();
+		console.log(formData);  // check using console to make sure all the form data values are correctly serialized
+
+		$.ajax({
+			type: "POST",
+			url: "http://localhost/its/bli1c",
+			data: formData,
+			dataType: "json",
+
+			success: function (data, status, xhr) {
+				if (data.rowcount >0) {
+					alert('BLI-1C Form Successfully Submitted');
+					appendList(data);
+				}
+				else {
+					alert('fail to insert, ' + data.errormessage);
+				}
+			},
+
+			error: function () {
+				alert('error' + status.log);
+			}
+		});
+	});
 
 	//Include other html file
 	includeHTML();

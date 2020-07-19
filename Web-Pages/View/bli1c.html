@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+	<style>
+		.p-3 {
+            background-color: #5D001D;
+        }
+        hr.dashed {
+            border-top: 3px dashed #bbb;
+        }
+	</style>
+</head>
+<body>
+	<!-- HEARDER -->
+	<div w3-include-html="header.html"></div>
+	<br><br>
+
+    <!-- FORM -->
+    <div class="container" style="background-color: #C5A4AD; display: block;" id="update-profile">
+
+		<div class="row" style="background-color: white; display: block;">
+			<div class="col-12">
+				<p id="ins"></p>
+                <p id="bli1c"></p>
+            </div>
+        </div>
+    </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script> 
+
+    $.ajax({
+        type: "GET",
+        url: "http://localhost/its/bli1c",
+        dataType: "json",
+        success: function (data, status, xhr) {
+            var prettyContent = '';
+
+            for (let i = 0; i < data.length; i++) {
+                prettyContent += '<h2>Form: ' +(i+1)+ '</h2>';
+                prettyContent += '<table class="table table-striped">';
+                prettyContent += '<thead>'
+                prettyContent += '<tr class="p-3 mb-2 text-white">'
+                prettyContent += '<th> Coordiantor Name </th>'
+                prettyContent += '<th> Faculty </th>'
+                prettyContent += '<th> Office Num </th>'
+                prettyContent += '<th> Phone Num </th>'
+                prettyContent += '<th> Faculty Programme </th>'
+                prettyContent += '<th> Coordinator Email </th>'
+                prettyContent += '</tr>'
+                prettyContent += '</thead>'
+                prettyContent += '<tbody>'
+                prettyContent += '<tr>'
+                prettyContent += '<td>' + data[i].coor_name + '</td>'
+                prettyContent += '<td>' + data[i].faculty + '</td>'
+                prettyContent += '<td>' + data[i].office_num + '</td>'
+                prettyContent += '<td>' + data[i].phone_num + '</td>'
+                prettyContent += '<td>' + data[i].faculty_programme + '</td>'
+                prettyContent += '<td>' + data[i].coor_email + '</td>'
+                prettyContent += '</tr>'
+                prettyContent += '</tbody>'
+                prettyContent += '</table><br><br>'
+
+                prettyContent += '<table class="table table-striped">';
+                prettyContent += '<thead>'
+                prettyContent += '<tr class="p-3 mb-2 text-white">'
+                prettyContent += '<th> Company Name </th>'
+                prettyContent += '<th> Company Registration </th>'
+                prettyContent += '<th> Company CEO </th>'
+                prettyContent += '<th> Company Website </th>'
+                prettyContent += '<th> Company Category </th>'
+                prettyContent += '<th> Company Sector </th>'
+                prettyContent += '</tr>'
+                prettyContent += '</thead>'
+                prettyContent += '<tbody>'
+                prettyContent += '<tr>'
+                prettyContent += '<td>' + data[i].comp_name + '</td>'
+                prettyContent += '<td>' + data[i].comp_reg + '</td>'
+                prettyContent += '<td>' + data[i].comp_ceo + '</td>'
+                prettyContent += '<td>' + data[i].comp_website + '</td>'
+                prettyContent += '<td>' + data[i].comp_category + '</td>'
+                prettyContent += '<td>' + data[i].comp_sector + '</td>'
+                prettyContent += '</tr>'
+                prettyContent += '</tbody>'
+                prettyContent += '</table><br><br>'
+
+                prettyContent += '<table class="table table-striped">';
+                prettyContent += '<thead>'
+                prettyContent += '<tr class="p-3 mb-2 text-white">'
+                prettyContent += '<th> Department </th>'
+                prettyContent += '<th> Contact Person </th>'
+                prettyContent += '<th> Contact Person Phone </th>'
+                prettyContent += '<th> Contact Person Email </th>'
+                prettyContent += '</tr>'
+                prettyContent += '</thead>'
+                prettyContent += '<tbody>'
+                prettyContent += '<tr>'
+                prettyContent += '<td>' + data[i].department + '</td>'
+                prettyContent += '<td>' + data[i].contact_name + '</td>'
+                prettyContent += '<td>' + data[i].contact_phone + '</td>'
+                prettyContent += '<td>' + data[i].contact_email + '</td>'
+                prettyContent += '</tr>'
+                prettyContent += '</tbody>'
+                prettyContent += '</table>'
+                prettyContent += '<br><br><hr class="dashed"><br><br>'
+            }
+
+            document.querySelector('#ins').innerHTML = prettyContent;
+
+        },
+
+        error: function () {
+            alert("An error occurred while processing JSON file.");
+        }
+    });
+
+	//Include other html file
+	includeHTML();
+	function includeHTML() {
+		var z, i, elmnt, file, xhttp;
+		/* Loop through a collection of all HTML elements: */
+		z = document.getElementsByTagName("*");
+		for (i = 0; i < z.length; i++) {
+			elmnt = z[i];
+			/*search for elements with a certain atrribute:*/
+			file = elmnt.getAttribute("w3-include-html");
+			if (file) {
+			/* Make an HTTP request using the attribute value as the file name: */
+			xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (this.readyState == 4) {
+				if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+				if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+				/* Remove the attribute, and call this function once more: */
+				elmnt.removeAttribute("w3-include-html");
+				includeHTML();
+				}
+			}
+			xhttp.open("GET", file, true);
+			xhttp.send();
+			/* Exit the function: */
+			return;
+			}
+		}
+	}
+</script>
+	
+</body>
+</html>

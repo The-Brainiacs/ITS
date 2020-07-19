@@ -22,7 +22,7 @@
         <input type="text" name="username" id="username">
         <label class="password">Password :</label>
         <input type="password" name="password" id="password">
-        <input type="button" name="signup" id="signup" value="Signup">
+        <input type="button" name="signup" id="signup" value="Sign-In">
     </form>
 </body>
 
@@ -57,7 +57,7 @@
 
                         $.each(data, function () {
                             if (username == this['username'] && password == this['password']) {
-                                window.location = "http://localhost/ITS/Web-Pages/View/profile.html";
+                                window.location = "profile.html";
                             }
 
                             else {
